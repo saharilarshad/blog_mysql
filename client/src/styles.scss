@@ -1,0 +1,395 @@
+$lightGreen:#b9e7e7;
+
+
+.app{
+    display: flex;
+    justify-content: center;
+
+    .link{
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+    .container{
+        width: 1024px;
+        //login
+        //register
+        .auth{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $lightGreen;
+
+            h1{
+                font-size: 20px;
+                color: teal;
+                margin-bottom:20px;
+            }
+    
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 200px;
+                gap: 20px;
+                background-color:#fff;
+                padding: 50px;
+            }
+    
+            input{
+                border:none;
+                border-bottom: 1px solid gray;
+                padding: 10px;
+            }
+    
+            button{
+                background-color: teal;
+                color: #fff;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+            }
+    
+            p{
+                font-size: 12px;
+                color: red;
+                text-align: center;
+            }
+    
+            span{
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+
+        //navbar
+        .navbar{
+            .container{
+                display: flex;
+                padding: 10px 0;
+                align-items: center;
+                justify-content: space-between;
+                .logo{
+                    cursor: pointer;
+                    width: 120px;
+                }
+                .links{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    h6{
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+
+                    span{
+                        cursor: pointer;
+                    }
+
+                    .write{
+                        background-color: $lightGreen;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 300;
+                        border: 1px solid white;
+
+                        &:hover{
+                            color: teal;
+                            border: 1px solid teal;
+                            background-color:white;
+                        }
+                    }
+                }
+            }
+        }
+
+        //footer
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 100px;
+            padding: 20px;
+            background-color:$lightGreen;
+
+            h2{
+                height: 50px;
+            }
+        }
+
+        //home
+        .home{
+
+            .posts{
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 150px;
+
+                .post{
+                    display: flex;
+                    gap: 100px;
+
+                    &:nth-child(2n + 1){
+                        flex-direction:row-reverse;
+                    }
+
+                    .img {
+                        flex:2;
+                        position: relative;
+
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            background-color:$lightGreen;
+                            top: 20px;
+                            left: -20px;
+                            width: 100%;
+                            height: 100%;
+                            z-index: -1;
+                        }
+
+                        img {
+                            max-height: 400px;
+                            width: 100%;
+                            object-fit: cover; 
+                            // z-index: 100;
+                        }
+                        
+                    }
+
+                    .content{
+                        flex:3;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h1{
+                            font-size: 48px;
+                        }
+
+                        p{
+                            font-size: 18px;
+                        }
+
+                        button{
+                            border:none;
+                            width: max-content;
+                            padding: 10px 20px;
+                            border:1px solid teal;
+                            background-color:transparent;
+                            cursor: pointer;
+                            color: teal;
+
+                            &:hover{
+                                border:1px solid white;
+                                background-color:$lightGreen;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //single
+        .single{
+            display: flex;
+            gap: 50px;
+
+            .content{
+                flex:5;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                img{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    gap:10px;
+                    font-size: 14px;
+
+                    img{
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .info{
+                        // display: flex;
+                        // flex-direction: column;
+
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+
+                    .edit{
+                        display: flex;
+                        gap: 10px;
+
+                        img{
+                            height: 20px;
+                            width: 20px;
+                            border-radius:50%;
+                        }
+                    }
+                }
+
+                h1{
+                    font-size: 48px;
+                    color: #333;
+                }
+
+                p{
+                    text-align: justify;
+                    line-height: 30px;
+                }
+            }
+
+            .menu{
+                flex:2
+            }
+        }
+
+        //Menu
+        .menu{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            h1{
+                font-size: 20px;
+                color:#555;
+            }
+
+            .post{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                img{
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+
+                h3{
+                    color:#555;
+                    font-size: 20px;
+                }
+
+                button{
+                    border:none;
+                    width: max-content;
+                    padding: 7px 14px;
+                    border:1px solid teal;
+                    background-color:transparent;
+                    cursor: pointer;
+                    color: teal;
+
+                    &:hover{
+                        border:1px solid white;
+                        background-color:$lightGreen;
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        .add{
+            display: flex;
+            margin-top: 20px;
+            gap: 20px;
+
+            .content{
+                flex:5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input{
+                    padding: 10px;
+                    border: 1px solid lightgrey;
+                }
+
+                .editorContainer{
+                    height: 300px;
+                    overflow: scroll;
+                    border: 1px solid lightgrey;
+
+                    .editor{
+                        height: 100%;
+                        border:none;
+                    }
+                }
+            }
+
+            .menu{
+                flex:2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item{
+                    padding: 10px;
+                    border: 1px solid lightgrey;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    color:#555;
+
+                    h1{
+                        font-size: 20px;
+                    }
+
+                    .file{
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+
+                    .buttons{
+                        display: flex;
+                        justify-content: space-between;
+
+                        :first-child{
+                            background-color:#fff;
+                            color: teal;
+                            padding: 3px 5px;
+                            border: 1px solid teal;
+                            cursor: pointer;
+                        }
+                        :last-child{
+                            background-color:teal;
+                            color: #fff;
+                            padding: 3px 5px;
+                            border:1px solid #fff;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .cat{
+                        display: flex;
+                        gap: 10px;
+                        color: teal;
+                    }
+                }
+            }
+        }
+    }
+}
